@@ -1,0 +1,9 @@
+<%= form_for @action do |form| %>
+	<p><%= form.label :name, "Action:"  %>
+		<%= form.text_field :name %>
+	</p>
+	<p><%= form.label :method, "Method:"  %>
+		<%= form.text_field :method %>
+	</p>
+	<p><%= form.submit %></p>
+<% end %>

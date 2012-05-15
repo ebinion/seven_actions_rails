@@ -1,0 +1,11 @@
+<h1>All Actions</h1>
+<p><%= link_to "create a action", "/actions/new" %></p>
+<ul>
+	<% @actions.each do |action| %>
+		<li>
+			<a href="<%= action_list_url action %>"><%= action.name %> (method: <%= action.method %>)</a> | 
+			<%= link_to "edit", action_edit_url(action) %>,
+			<%= link_to "delete", action_delete_url(action), :method => :delete, :confirm => "I could ... but are you sure you want to do that?" %>
+		</li>
+	<% end %>
+</ul>
